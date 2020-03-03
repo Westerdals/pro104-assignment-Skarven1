@@ -1,0 +1,13 @@
+label {
+    font-weight: bold;
+}
+
+body{
+    background-color: beige;
+}
+
+#productlist{
+    background-color: green;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
