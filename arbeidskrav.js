@@ -1,23 +1,18 @@
-function renderProductList(){
-    const productList = JSON.parse(window.localStorage.getItem("productList")) || [] ;
+function renderTaskManager(){
+    const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [] ;
 
-    if (productList == undefined){
-        productList = [];
+    if (taskList == undefined){
+        taskList = [];
     }
 
-    const productListEl = document.getElementById("productList");
-    productListEl.innerHTML = "";
-    for (const product of productList) {
-        const productEl = document.createElement("div");
-        // "Deconstructoring"
-        //const {name, image, price, description} = product
-        // ==>
-        const { name, image, price, description } = product;
-        productEl.innerHTML = `<h4>${name}</h4>
-            ${(image ? `<div><img height='200px' src="${ image }" /></div> `: "")} 
-            <div>${ description }</div> 
-            <div><small>Price:${ price }</small></div>`; 
-        productListEl.appendChild(productEl);
+    const listOfTask = document.getElementById("taskList");
+    listOfTask.innerHTML = "";
+    for (const task of taskList) {
+        const taskDiv = document.createElement("div");
+        const { name, description } = task;
+        taskDiv.innerHTML = `<h4>${name}</h4> 
+            <div>${ description }</div> `; 
+        listOfTask.appendChild(taskDiv);
     }
 }
 
@@ -27,22 +22,21 @@ function createNewProduct(event){
     const name = document.querySelector("[name='name']").value;
     const price = document.querySelector("[name='price']").value;
     const description = document.querySelector("[name='description']").value;
-    const image = document.querySelector("[name='image']").files[0].name;
 
-    const product = {name,price,description,image};
+    const task = {name,price,description};
 
 
-    const productList = JSON.parse(window.localStorage.getItem("productList")) || [];
-    productList.push(product);
-    window.localStorage.setItem("productList", JSON.stringify(productList));
+    const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
+    taskList.push(task);
+    window.localStorage.setItem("taskList", JSON.stringify(productList));
     renderProductList();
 
     event.target.reset();
 }
-renderProductList();
+renderTaskManager();
 
 window.addEventListener("storage", function(event) {
-    if (event.key === "productList") {
+    if (event.key === "taskListList") {
         renderProductList();
     }
 });
