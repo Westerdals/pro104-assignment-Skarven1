@@ -58,7 +58,19 @@ body{
     margin-top: 70px;
 
 }
-
+#clear-btn{
+    background-color: #565656; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: -47px;
+}
 #task {
     font-family: sans-serif;
     color: white;
