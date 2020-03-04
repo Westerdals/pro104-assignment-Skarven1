@@ -8,24 +8,39 @@
 
 <div id = "header-div">
 <h1>Task manager</h1>
-<h2>Add new task</h2>
 </div>
 
 <div id = "input-div">
+<h2>Add new task</h2>
 <form onsubmit="createNewTask(event)">
 
-    <a id = "Team-member">Team member</a>
-    <a id = "Task"> Task </a>
-    <div><label> <br> <div><input id = "name-input" name="name" placeholder="Ola Nordmann"/></div></label></div>
-    <div><label><textarea id = "desc-input" name="description" placeholder="A longer description"></textarea></label></div>
+    <a id="team-member">Team member</a>
+    <a id="task">Task</a>
+    <div><label> <br> <div><input id="name-input" name="name" placeholder="Ola Nordmann"/></div></label></div>
+    <div><label><textarea id="desc-input" name="description" placeholder="A longer description"></textarea></label></div>
     <input id = "submit-btn" type="submit"/>
 
 </form>
 </div>
+<div id="input-div">
+    <h2>Add new team member</h2>
+    <form onsubmit="createNewTeamMember(event)">
 
-<h2 id = "tasks">Tasks:</h2>
+        <a id="team-member-name">Name</a>
+        <a id="team-member-jobtitle">Jobtitle</a>
+        <div><label> <br> <div><input id="name-input" name="teammember-name" placeholder="Kari Nordmann"/></div></label></div>
+        <div><label><textarea id="jobtitle-input" name="job-title" placeholder="Job title"></textarea></label></div>
+        <input id = "submit-btn" type="submit"/>
+    
+    </form>
+</div>
+
+<h2 id="tasks">Tasks:</h2>
 
 <div id="taskList"></div>
+
+<h2 id="team-members">Team members:</h2>
+<div id="team-member-list"></div>
 
 </body>
 <script src="arbeidskrav.js"></script>

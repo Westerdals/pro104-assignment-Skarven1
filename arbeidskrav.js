@@ -17,6 +17,26 @@ function renderTaskManager(){
     }
 }
 
+function renderMemberList(){
+    const memberListLocal = JSON.parse(window.localStorage.getItem("memberlist")) || [] ;
+
+    if (memberListLocal == undefined){
+        memberListLocal = [];
+    }
+
+    const listOfMembers = document.getElementById("team-member-list");
+    listOfMembers.innerHTML = "";
+    for (const members of memberListLocal) {
+        const memberDiv = document.createElement("div");
+        memberDiv.setAttribute('class', 'member-divs');
+        const {teamMemberName, jobTitle} = members;
+        memberDiv.innerHTML = `<h4>${ teamMemberName }</h4> 
+                            <div>${ jobTitle }</div> `;
+        listOfMembers.appendChild(memberDiv);
+        }
+}
+
+
 function createNewTask(event){
     event.preventDefault();
 
@@ -33,7 +53,26 @@ function createNewTask(event){
 
     event.target.reset();
 }
+
+function createNewTeamMember(memberInfo){
+    memberInfo.preventDefault();
+
+    const teamMemberName = document.querySelector("[name='teammember-name']").value;
+    const jobTitle = document.querySelector("[name='job-title']").value;
+
+    const memberData = {teamMemberName, jobTitle};
+
+    const memberList = JSON.parse(window.localStorage.getItem("memberlist")) || [];
+    memberList.push(memberData);
+    window.localStorage.setItem("memberlist", JSON.stringify(memberList));
+
+    renderMemberList();
+
+    memberInfo.target.reset();
+}
+
 renderTaskManager();
+renderMemberList();
 
 window.addEventListener("storage", function(event) {
     if (event.key === "taskList") {
