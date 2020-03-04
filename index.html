@@ -1,43 +1,30 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<body>
-<h1>Webshop</h1>
 
-<h1>Heihei</h1>
-<h2>Add new product</h2>
-<h3> Jeg endrer html </h3>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<script src="webshop.js"></script>
+<body>
+
+<h1>Task manager</h1>
+<h2>Add new task</h2>
+
 
 <form onsubmit="createNewProduct(event)">
-    <div>
-        <label>Name:
-            <div><input name="name" placeholder="Product title to show in headlines"/></div>
-        </label>
-    </div>
-    <div>
-        <label>Price:
-            <div><input name="price" placeholder="10.90"/></div>
-        </label>
-    </div>
-    <div>
-        <label>Image:
-            <div><input name="image" type="file" ></div>
-        </label>
-    </div>
-    <div>
-        <label>Description:
-            <div><textarea name="description" placeholder="A longer product description"></textarea>
-        </label>
-    </div>
-    <div>
-        <input type="submit"/>
-    </div>
+
+    <div><label> Team member: <div><input name="name" placeholder="...Johan"/></div></label></div>
+    
+    <div><label>Task: <textarea name="description" placeholder="A longer description"></textarea></label></div>
+    
+    <input type="submit"/>
+
 </form>
 
-<h2> TEST JEG LEGGER TIL NYE TING HER </h2>
 
-<div id="productList">  </div>
+<h2>Tasks:</h2>
 
-<script src="webshop.js"></script>
+
+<div id="productList"></div>
+
 </body>
 </html>
