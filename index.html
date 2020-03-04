@@ -3,28 +3,28 @@
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+<script src="webshop.js"></script>
 <body>
 
+<div id = "header-div">
 <h1>Task manager</h1>
 <h2>Add new task</h2>
+</div>
 
-
+<div id = "input-div">
 <form onsubmit="createNewProduct(event)">
 
-    <div><label> Team member: <div><input name="teamMember" placeholder="...Johan"/></div></label></div>
-    
-    <div><label>Task: <textarea name="taskDescription" placeholder="A longer description"></textarea></label></div>
-    
-    <input type="submit"/>
+    <a id = "Team-member">Team member</a>
+    <a id = "Task"> Task </a>
+    <div><label> <br> <div><input id = "name-input" name="name" placeholder="Ola Nordmann"/></div></label></div>
+    <div><label><textarea id = "desc-input" name="description" placeholder="A longer description"></textarea></label></div>
+    <input id = "submit-btn" type="submit"/>
 
 </form>
+</div>
 
-
-<h2>Tasks:</h2>
-
+<h2 id = "tasks">Tasks:</h2>
 
 <div id="taskList"></div>
-
 </body>
-<script src="arbeidskrav.js"></script>
 </html>
