@@ -9,6 +9,7 @@ function renderTaskManager(){
     listOfTask.innerHTML = "";
     for (const task of taskList) {
         const taskDiv = document.createElement("div");
+        taskDiv.setAttribute('class', 'task-divs');
         const { teamMember, taskDescription } = task;
         taskDiv.innerHTML = `<h4>${ teamMember }</h4> 
                             <div>${ taskDescription }</div> `; 
@@ -16,7 +17,7 @@ function renderTaskManager(){
     }
 }
 
-function createNewProduct(event){
+function createNewTask(event){
     event.preventDefault();
 
     const teamMember = document.querySelector("[name='name']").value;
