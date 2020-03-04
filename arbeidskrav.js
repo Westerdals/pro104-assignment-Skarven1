@@ -19,8 +19,8 @@ function renderTaskManager(){
 function createNewProduct(event){
     event.preventDefault();
 
-    const teamMember = document.querySelector("[name='teamMember']").value;
-    const taskDescription = document.querySelector("[name='taskDescription']").value;
+    const teamMember = document.querySelector("[name='name']").value;
+    const taskDescription = document.querySelector("[name='description']").value;
 
     const task = {teamMember,taskDescription};
 
