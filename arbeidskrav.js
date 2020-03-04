@@ -10,8 +10,8 @@ function renderTaskManager(){
     for (const task of taskList) {
         const taskDiv = document.createElement("div");
         const { teamMember, taskDescription } = task;
-        taskDiv.innerHTML = `<h4>${ teamMember }</h4> 
-                            <div>${ taskDescription }</div> `; 
+        taskDiv.innerHTML = `<h4>Team Member: ${ teamMember }</h4> 
+                            <div>Task to do: ${ taskDescription }</div> `; 
         listOfTask.appendChild(taskDiv);
     }
 }
