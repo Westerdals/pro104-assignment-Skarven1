@@ -79,3 +79,6 @@ window.addEventListener("storage", function(event) {
         renderTaskManager();
     }
 });
+function clearlist(){
+localStorage.clear();
+}
