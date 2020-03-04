@@ -10,13 +10,13 @@ function renderTaskManager(){
     for (const task of taskList) {
         const taskDiv = document.createElement("div");
         const { teamMember, taskDescription } = task;
-        taskDiv.innerHTML = `<h4>Team Member: ${ teamMember }</h4> 
-                            <div>Task to do: ${ taskDescription }</div> `; 
+        taskDiv.innerHTML = `<h4>${ teamMember }</h4> 
+                            <div>${ taskDescription }</div> `; 
         listOfTask.appendChild(taskDiv);
     }
 }
 
-function createNewProduct(event){
+function createNewTask(event){
     event.preventDefault();
 
     const teamMember = document.querySelector("[name='name']").value;
