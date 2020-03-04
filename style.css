@@ -7,8 +7,8 @@ body{
 }
 
 
-#tasklist{
-    background-color: green;
+#taskList{
+    background-color: #565656;
     display:grid;
     grid-template-columns: repeat(3,1fr);
 }
@@ -80,4 +80,6 @@ body{
 #tasks{
     color: white;
     font-family: sans-serif;
+
+    
 }
