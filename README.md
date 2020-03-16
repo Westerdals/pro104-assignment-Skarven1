@@ -1,5 +1,4 @@
-# pro104-assignment-Skarven1
-## pro104-assignment-Skarven1 created by GitHub Classroom
+# pro104-assignment-Skarven1 created by GitHub Classroom
 ### Medlemmene i gruppen bestående av,
 - Adrian Hansen,
 - Johan C. H. Gulbrandsen,
